@@ -1,0 +1,28 @@
+---
+id: storage-engine-matrix
+title: Storage Engine Decision Matrix
+description: Interactive matrix for picking the right storage engine architecture based on workload characteristics.
+sidebar_position: 2
+---
+
+import StorageEngineMatrix from '@site/src/components/Interactive/StorageEngineMatrix';
+
+# Storage Engine Decision Matrix
+
+:::info Systems Design Framework
+Every storage engine embodies trade-offs dictated by the **RUM Conjecture**: an engine can optimize for at most two of **R**ead amplification, **U**pdate (write) amplification, or **M**emory/space amplification.
+:::
+
+<StorageEngineMatrix />
+
+---
+
+## Architectural Comparison Table
+
+| Architecture | Primary Data Structure | Best Suited For | Write Amplification | Read Amplification | Production Systems |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **B+ Tree** | Balanced N-ary Tree (4KB - 16KB pages) | Point lookups, ACID OLTP, low read latency | High ($10\times - 30\times$) | Low ($O(\log_B N)$) | PostgreSQL, SQLite, MySQL InnoDB |
+| **LSM Tree** | MemTable + Multi-Level SSTables + Bloom Filters | Write-heavy ingestion, high-throughput time-series | Low to Medium ($2\times - 10\times$) | Medium ($O(L \cdot \log N)$) | RocksDB, LevelDB, Cassandra, Pebble |
+| **Columnar** | Column chunks, dictionary encoding, vector buffers | Analytical OLAP aggregations, range scans | Batched / MergeTree | Minimal for queried columns | ClickHouse, DuckDB, Parquet, Snowflake |
+| **Segmented Log** | Append-only sequential files + index offsets | Streaming event journals, ordered messaging | Lowest ($1\times$) | Low for sequential consumption | Apache Kafka, Apache Pulsar, Redpanda |
+| **In-Memory** | SkipList, Adaptive Radix Tree (ART), Hash Table | Sub-millisecond latency, fast cache, session stores | $0$ (RAM), batched AOF/RDB | $O(1) - O(\log N)$ (RAM speeds) | Redis, Memcached, Dragonfly |

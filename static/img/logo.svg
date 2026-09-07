@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" width="420" height="100">
+  <defs>
+    <style>
+      .brand-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Eurostile", "MicroSquare", "Orbitron", sans-serif;
+        font-weight: 800;
+        font-size: 58px;
+        letter-spacing: 2px;
+        fill: #ffffff;
+      }
+      .blue-10 {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Eurostile", "MicroSquare", "Orbitron", sans-serif;
+        font-weight: 800;
+        font-size: 58px;
+        letter-spacing: 2px;
+        fill: #0080ff;
+      }
+      .tagline {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-size: 13.5px;
+        font-weight: 600;
+        letter-spacing: 7px;
+        fill: #94a3b8;
+      }
+      @media (prefers-color-scheme: light) {
+        .brand-text { fill: #0f172a; }
+        .tagline { fill: #475569; }
+      }
+      [data-theme="light"] .brand-text { fill: #0f172a; }
+      [data-theme="light"] .tagline { fill: #475569; }
+    </style>
+  </defs>
+
+  <!-- Wordmark -->
+  <text x="10" y="58">
+    <tspan class="brand-text">S</tspan>
+    <tspan class="blue-10">10</tspan>
+    <tspan class="brand-text">RAGE</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="14" y="88" class="tagline">DATA • STORAGE • AI</text>
+</svg>

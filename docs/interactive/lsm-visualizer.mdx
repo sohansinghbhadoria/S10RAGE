@@ -1,0 +1,31 @@
+---
+id: lsm-visualizer
+title: LSM Tree Simulator
+description: Interactive visualizer for Log-Structured Merge Tree writes, MemTable flushes, and background compaction.
+sidebar_position: 3
+---
+
+import LsmVisualizer from '@site/src/components/Interactive/LsmVisualizer';
+
+# Log-Structured Merge Tree (LSM) Simulator
+
+:::note Deep Dive
+Log-Structured Merge Trees (LSM) trade read amplification and background compaction I/O to achieve **unrivaled write throughput** by turning random mutations into sequential disk writes.
+:::
+
+<LsmVisualizer />
+
+---
+
+## Anatomy of an LSM Tree
+
+An LSM-based storage engine consists of three core layers:
+
+1. **MemTable (RAM)**:
+   A concurrent in-memory sorted index (typically a **SkipList** or **Red-Black Tree**). All incoming `PUT` and `DELETE` (tombstone) requests enter the MemTable immediately.
+2. **Write-Ahead Log (WAL)**:
+   An append-only sequential file on disk. Before updating the MemTable, writes are appended to the WAL to provide durability across system crashes.
+3. **Sorted String Tables (SSTables on Disk)**:
+   Immutable files divided into sorted key-value blocks. When a MemTable reaches capacity (e.g. 64MB), it is frozen and flushed as a Level 0 SSTable.
+4. **Bloom Filters**:
+   A compact probabilistic bit array prepended to each SSTable. It guarantees **zero false negatives**: if the Bloom filter reports a key is absent, the engine safely skips reading that SSTable from disk!

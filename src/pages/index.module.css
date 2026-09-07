@@ -1,0 +1,249 @@
+.heroContainer {
+  padding: 4.5rem 1.5rem 3.5rem;
+  text-align: center;
+  position: relative;
+  background: radial-gradient(circle at 50% 20%, rgba(56, 139, 253, 0.08) 0%, transparent 60%);
+  border-bottom: 1px solid var(--mdn-border);
+}
+
+.heroTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  background: var(--mdn-badge-bg);
+  color: var(--ifm-color-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(56, 139, 253, 0.2);
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.brandHighlight {
+  background: linear-gradient(135deg, #388bfd 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--ifm-color-content-secondary);
+  max-width: 680px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  background-color: var(--ifm-color-primary);
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 0.75rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(56, 139, 253, 0.35);
+}
+
+.secondaryBtn {
+  background-color: var(--mdn-bg-subtle);
+  color: var(--ifm-color-content) !important;
+  font-weight: 600;
+  padding: 0.75rem 1.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--mdn-border);
+  text-decoration: none !important;
+  transition: all 0.15s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: var(--mdn-badge-bg);
+  border-color: var(--ifm-color-primary);
+}
+
+/* Pillars Section */
+.pillarsSection {
+  padding: 4rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.sectionSubtitle {
+  color: var(--ifm-color-content-secondary);
+  font-size: 1.05rem;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.pillarCard {
+  background: var(--mdn-card-bg);
+  border: 1px solid var(--mdn-border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pillarCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.pillarIcon {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.pillarCardTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.pillarCardDesc {
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.pillarLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-top: 1px solid var(--mdn-border);
+  padding-top: 1rem;
+}
+
+.subLink {
+  font-size: 0.85rem;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.subLink:hover {
+  text-decoration: underline;
+}
+
+/* Interactive Highlight Section */
+.interactiveSection {
+  background: var(--mdn-bg-subtle);
+  border-top: 1px solid var(--mdn-border);
+  border-bottom: 1px solid var(--mdn-border);
+  padding: 4rem 1.5rem;
+}
+
+.interactiveContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Course Syllabus Section */
+.courseSection {
+  padding: 4.5rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.courseCard {
+  background: var(--mdn-card-bg);
+  border: 1px solid var(--mdn-border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-decoration: none !important;
+  color: var(--ifm-color-content) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.courseCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 6px 20px rgba(56, 139, 253, 0.12);
+}
+
+.courseNumber {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.4rem;
+}
+
+.courseTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
+}
+
+.courseDesc {
+  font-size: 0.84rem;
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.courseAction {
+  font-size: 0.8rem;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
