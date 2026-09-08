@@ -291,6 +291,11 @@ const config: Config = {
           ],
         },
         {
+          to: '/maintainers',
+          label: '👥 Maintainers',
+          position: 'left',
+        },
+        {
           type: 'dropdown',
           label: '🤝 Community',
           position: 'left',
@@ -298,10 +303,6 @@ const config: Config = {
             {
               label: '📖 Introduction',
               to: '/docs/intro',
-            },
-            {
-              label: '👥 Maintainers',
-              to: '/maintainers',
             },
             {
               label: '🤝 Contributing Guide',

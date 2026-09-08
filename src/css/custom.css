@@ -77,6 +77,12 @@
   max-width: 100%;
 }
 
+.navbar,
+.navbar__inner,
+.navbar__items {
+  overflow: visible !important;
+}
+
 .navbar__items {
   display: flex;
   align-items: center;
@@ -86,18 +92,16 @@
 .navbar__items:not(.navbar__items--right) {
   flex: 1 1 auto;
   min-width: 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.navbar__items:not(.navbar__items--right)::-webkit-scrollbar {
-  display: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap !important;
+  overflow: visible !important;
 }
 
 .navbar__items--right {
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 
 /* Glassmorphism blur on desktop */
@@ -115,32 +119,35 @@
 }
 
 /* Responsive desktop scaling for zoom & mid-sized viewports */
-@media (min-width: 997px) and (max-width: 1250px) {
+@media (min-width: 997px) and (max-width: 1380px) {
   .navbar__item {
-    padding: 0.25rem 0.4rem !important;
-    font-size: 0.82rem !important;
+    padding: 0.25rem 0.35rem !important;
+    font-size: 0.80rem !important;
   }
   .navbar__brand {
-    margin-right: 0.4rem !important;
+    margin-right: 0.35rem !important;
   }
   .navbar__search-input {
-    width: 100px !important;
+    width: 95px !important;
   }
   .navbar__search-input:focus {
     width: 140px !important;
   }
 }
 
-@media (min-width: 997px) and (max-width: 1100px) {
+@media (min-width: 997px) and (max-width: 1160px) {
   .navbar__item {
-    padding: 0.2rem 0.3rem !important;
-    font-size: 0.77rem !important;
+    padding: 0.2rem 0.25rem !important;
+    font-size: 0.74rem !important;
+  }
+  .navbar__brand {
+    margin-right: 0.25rem !important;
   }
   .navbar__search-input {
-    width: 85px !important;
+    width: 75px !important;
   }
   .navbar__search-input:focus {
-    width: 125px !important;
+    width: 120px !important;
   }
 }
 
@@ -170,26 +177,37 @@
   border-top-color: #f0f6fc !important;
 }
 
-/* Dropdown Menu Container */
+/* Dropdown Menu Container (High z-index and overflow visible so never clipped) */
 .dropdown__menu {
   background-color: #161b22 !important;
   border: 1px solid var(--mdn-border);
-  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.6) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8) !important;
   border-radius: 8px !important;
   padding: 0.5rem !important;
   min-width: 14rem !important;
+  max-width: 92vw !important;
+  z-index: 1000 !important;
 }
 
-/* Dropdown Options (White Text) */
+/* Ensure hover or active opens dropdown */
+.dropdown--show .dropdown__menu,
+.dropdown--hoverable:hover .dropdown__menu {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Dropdown Options (White Text with High Contrast) */
 .dropdown__link {
   color: #ffffff !important;
-  font-size: 0.92rem;
+  font-size: 0.90rem;
   font-weight: 500;
   padding: 0.55rem 0.85rem !important;
   border-radius: 6px !important;
   transition: all 0.15s ease;
   display: flex;
   align-items: center;
+  white-space: nowrap !important;
 }
 
 .dropdown__link:hover,
