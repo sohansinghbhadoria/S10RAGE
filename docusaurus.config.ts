@@ -105,7 +105,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'storageSidebar',
           position: 'left',
-          label: '📚 Storage Modules (18 Core)',
+          label: '📚 Storage Modules',
         },
         {
           type: 'dropdown',
@@ -144,7 +144,7 @@ const config: Config = {
         },
         {
           type: 'dropdown',
-          label: '🔬 Interactive Tools',
+          label: '🔬 Interactive',
           position: 'left',
           items: [
             {
@@ -163,7 +163,7 @@ const config: Config = {
         },
         {
           type: 'dropdown',
-          label: '🚀 Protocols & Deep Dives',
+          label: '🚀 Protocols',
           position: 'left',
           items: [
             {
@@ -202,7 +202,7 @@ const config: Config = {
         },
         {
           type: 'dropdown',
-          label: '🛠️ I/O Tools Suite',
+          label: '🛠️ I/O Tools',
           position: 'left',
           items: [
             {
@@ -291,19 +291,23 @@ const config: Config = {
           ],
         },
         {
-          to: '/docs/intro',
-          label: '📖 Introduction',
+          type: 'dropdown',
+          label: '🤝 Community',
           position: 'left',
-        },
-        {
-          to: '/maintainers',
-          label: '👥 Maintainers',
-          position: 'left',
-        },
-        {
-          to: '/docs/contributing',
-          label: '🤝 Contributing',
-          position: 'left',
+          items: [
+            {
+              label: '📖 Introduction',
+              to: '/docs/intro',
+            },
+            {
+              label: '👥 Maintainers',
+              to: '/maintainers',
+            },
+            {
+              label: '🤝 Contributing Guide',
+              to: '/docs/contributing',
+            },
+          ],
         },
         {
           href: 'https://github.com/sohansinghbhadoria/S10RAGE',

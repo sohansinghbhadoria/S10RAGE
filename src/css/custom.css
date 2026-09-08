@@ -64,6 +64,40 @@
   background-color: rgba(18, 18, 20, 0.96);
   position: sticky;
   top: 0;
+  z-index: 100;
+}
+
+/* Force single-line fluid layout on all screen sizes & zoom levels */
+.navbar__inner {
+  display: flex;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+}
+
+.navbar__items {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap !important;
+}
+
+.navbar__items:not(.navbar__items--right) {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.navbar__items:not(.navbar__items--right)::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar__items--right {
+  flex-shrink: 0;
 }
 
 /* Glassmorphism blur on desktop */
@@ -80,6 +114,36 @@
   }
 }
 
+/* Responsive desktop scaling for zoom & mid-sized viewports */
+@media (min-width: 997px) and (max-width: 1250px) {
+  .navbar__item {
+    padding: 0.25rem 0.4rem !important;
+    font-size: 0.82rem !important;
+  }
+  .navbar__brand {
+    margin-right: 0.4rem !important;
+  }
+  .navbar__search-input {
+    width: 100px !important;
+  }
+  .navbar__search-input:focus {
+    width: 140px !important;
+  }
+}
+
+@media (min-width: 997px) and (max-width: 1100px) {
+  .navbar__item {
+    padding: 0.2rem 0.3rem !important;
+    font-size: 0.77rem !important;
+  }
+  .navbar__search-input {
+    width: 85px !important;
+  }
+  .navbar__search-input:focus {
+    width: 125px !important;
+  }
+}
+
 /* Top Banner Topics Visibility (Crisp white text on both Light & Dark themes) */
 .navbar__link,
 .navbar__item,
@@ -87,6 +151,13 @@
 .navbar__title {
   color: #f0f6fc !important;
   font-weight: 600;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.navbar__item {
+  display: inline-flex;
+  align-items: center;
 }
 
 .navbar__link:hover,
@@ -132,6 +203,32 @@
   background-color: rgba(255, 255, 255, 0.12) !important;
   color: #f0f6fc !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  width: 130px;
+  transition: width 0.25s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar__search-input:focus {
+  width: 175px;
+}
+
+@media (max-width: 1250px) {
+  .navbar__search-input {
+    width: 105px !important;
+  }
+  .navbar__search-input:focus {
+    width: 150px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar__search-input {
+    width: 80px !important;
+  }
+  .navbar__search-input:focus {
+    width: 120px !important;
+  }
 }
 
 .navbar__search-input::placeholder {
