@@ -184,20 +184,20 @@
   margin: 0 auto;
 }
 
-/* Course Syllabus Section */
-.courseSection {
+/* Storage Modules Section */
+.moduleSection {
   padding: 4.5rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.courseGrid {
+.moduleGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.25rem;
 }
 
-.courseCard {
+.moduleCard {
   background: var(--mdn-card-bg);
   border: 1px solid var(--mdn-border);
   border-radius: 10px;
@@ -210,13 +210,13 @@
   transition: all 0.2s ease;
 }
 
-.courseCard:hover {
+.moduleCard:hover {
   transform: translateY(-2px);
   border-color: var(--ifm-color-primary);
   box-shadow: 0 6px 20px rgba(56, 139, 253, 0.12);
 }
 
-.courseNumber {
+.moduleNumber {
   font-family: var(--ifm-font-family-monospace);
   font-size: 0.78rem;
   font-weight: 700;
@@ -224,21 +224,21 @@
   margin-bottom: 0.4rem;
 }
 
-.courseTitle {
+.moduleTitle {
   font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
   line-height: 1.35;
 }
 
-.courseDesc {
+.moduleDesc {
   font-size: 0.84rem;
   color: var(--ifm-color-content-secondary);
   line-height: 1.5;
   margin-bottom: 0.75rem;
 }
 
-.courseAction {
+.moduleAction {
   font-size: 0.8rem;
   color: var(--ifm-color-primary);
   font-weight: 600;

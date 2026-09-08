@@ -35,7 +35,7 @@ const sidebars: SidebarsConfig = {
         'storage-security/encryption-iam-and-compliance',
         'architecture-and-design/system-design-patterns',
         'troubleshooting/real-world-storage-runbook',
-        'capstone-project/enterprise-storage-platform',
+        'reference-architecture/enterprise-storage-platform',
       ],
     },
     {

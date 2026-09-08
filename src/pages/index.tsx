@@ -103,7 +103,7 @@ const STORAGE_MODULES = [
   { num: '15', title: 'Storage Security & Compliance', desc: 'LUKS block encryption, TLS in-transit, POSIX ACLs, IAM, and NIST SP 800-88 crypto-shredding.', url: '/docs/storage-security/encryption-iam-and-compliance' },
   { num: '16', title: 'Architecture & System Design', desc: '6-factor storage tradeoffs, capacity planning, and reference patterns for FinTech & streaming.', url: '/docs/architecture-and-design/system-design-patterns' },
   { num: '17', title: 'Troubleshooting Runbook', desc: 'Diagnostic playbooks: Inode exhaustion, latency spikes, degraded RAID, and slow Ceph OSDs.', url: '/docs/troubleshooting/real-world-storage-runbook' },
-  { num: '18', title: 'Final Capstone Project', desc: 'Design a 100 TB multi-region storage platform: 30% growth, 99.99% SLA, hybrid DB + object.', url: '/docs/capstone-project/enterprise-storage-platform' },
+  { num: '18', title: 'Enterprise Reference Architecture', desc: 'End-to-end 100 TB multi-tier storage platform blueprint: multi-AZ NVMe, Kafka, MinIO WORM & ClickHouse.', url: '/docs/reference-architecture/enterprise-storage-platform' },
 ];
 
 export default function Home(): ReactNode {
@@ -144,7 +144,7 @@ export default function Home(): ReactNode {
       {/* Main Content */}
       <main>
         {/* Technical Modules Section */}
-        <section className={styles.courseSection}>
+        <section className={styles.moduleSection}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Modules</h2>
             <p className={styles.sectionSubtitle}>
@@ -152,15 +152,15 @@ export default function Home(): ReactNode {
             </p>
           </div>
 
-          <div className={styles.courseGrid}>
+          <div className={styles.moduleGrid}>
             {STORAGE_MODULES.map((mod) => (
-              <Link key={mod.num} to={mod.url} className={styles.courseCard}>
+              <Link key={mod.num} to={mod.url} className={styles.moduleCard}>
                 <div>
-                  <div className={styles.courseNumber}>MODULE {mod.num}</div>
-                  <h3 className={styles.courseTitle}>{mod.title}</h3>
-                  <p className={styles.courseDesc}>{mod.desc}</p>
+                  <div className={styles.moduleNumber}>MODULE {mod.num}</div>
+                  <h3 className={styles.moduleTitle}>{mod.title}</h3>
+                  <p className={styles.moduleDesc}>{mod.desc}</p>
                 </div>
-                <div className={styles.courseAction}>
+                <div className={styles.moduleAction}>
                   <span>Read Module</span>
                   <span>→</span>
                 </div>

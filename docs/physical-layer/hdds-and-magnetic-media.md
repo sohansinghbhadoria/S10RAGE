@@ -36,7 +36,7 @@ $$\text{Total Latency} = t_{\text{seek}} + t_{\text{rotational}} + t_{\text{tran
 1. **Seek Time ($t_{\text{seek}}$)**: The time for the mechanical voice coil actuator to accelerate and position the head over the correct track ($3 - 9\text{ ms}$).
 2. **Rotational Latency ($t_{\text{rotational}}$)**: The time waiting for the target sector to rotate underneath the head. On average, this is half a revolution:
    $$t_{\text{rot}} = \frac{1}{2} \cdot \frac{60}{\text{RPM}} = \frac{30}{7200} \approx 4.17\text{ ms}$$
-3. **Transfer Time ($t_{\text{transfer}}$)**: Time to read the bits off the magnetic track into the onboard controller cache ($\approx 10 - 20\mu\text{s}$ for 4KB).
+3. **Transfer Time ($t_{\text{transfer}}$)**: Time to read the bits off the magnetic track into the onboard controller cache ($\approx 10 - 20µs$ for 4KB).
 
 Because seek and rotational latencies dominate, random 4KB I/O yields only **$75 - 150\text{ IOPS}$**, whereas sequential streaming saturates platter surface density at **$200 - 280\text{ MB/s}$**.
 

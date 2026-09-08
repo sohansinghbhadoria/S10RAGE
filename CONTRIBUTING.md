@@ -26,9 +26,9 @@ S10RAGE is built on [Docusaurus 3](https://docusaurus.io/) with TypeScript, Reac
 ```text
 S10RAGE/
 ├── docs/                        # All technical modules & documentation
-│   ├── 01-introduction/         # Course chapters & modules
+│   ├── 01-introduction/         # Core engineering modules & reference guides
 │   ├── ...
-│   ├── 18-capstone-project/
+│   ├── 18-reference-architecture/
 │   ├── storage-networking/      # Topic-based specialized modules
 │   ├── physical-layer/
 │   ├── os-subsystem/
