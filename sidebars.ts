@@ -40,6 +40,23 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: '🛠️ Storage I/O Tools & Benchmarking Suite',
+      collapsed: false,
+      items: [
+        'io-tools/overview',
+        'io-tools/fio',
+        'io-tools/vdbench',
+        'io-tools/dd',
+        'io-tools/elbencho',
+        'io-tools/filebench',
+        'io-tools/hcibench',
+        'io-tools/s3cmd',
+        'io-tools/s5cmd',
+        'io-tools/awscli',
+      ],
+    },
+    {
+      type: 'category',
       label: '🛠️ Interactive Reference Tools',
       collapsed: false,
       items: [

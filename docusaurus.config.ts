@@ -201,6 +201,53 @@ const config: Config = {
           ],
         },
         {
+          type: 'dropdown',
+          label: '🛠️ I/O Tools Suite',
+          position: 'left',
+          items: [
+            {
+              label: '📊 Overview & Tool Selection Matrix',
+              to: '/docs/io-tools/overview',
+            },
+            {
+              label: '⚡ 1. FIO (Flexible I/O Tester)',
+              to: '/docs/io-tools/fio',
+            },
+            {
+              label: '☕ 2. VDBench (Enterprise Block/File)',
+              to: '/docs/io-tools/vdbench',
+            },
+            {
+              label: '💾 3. DD (POSIX Baseline & Direct I/O)',
+              to: '/docs/io-tools/dd',
+            },
+            {
+              label: '🚀 4. Elbencho (Distributed NVMe & S3)',
+              to: '/docs/io-tools/elbencho',
+            },
+            {
+              label: '📁 5. Filebench (WML App Profiles)',
+              to: '/docs/io-tools/filebench',
+            },
+            {
+              label: '🏢 6. HCIBench (VMware vSAN & HCI)',
+              to: '/docs/io-tools/hcibench',
+            },
+            {
+              label: '🪣 7. S3cmd (S3 Admin & Scripting)',
+              to: '/docs/io-tools/s3cmd',
+            },
+            {
+              label: '⚡ 8. S5cmd (High-Speed Parallel S3)',
+              to: '/docs/io-tools/s5cmd',
+            },
+            {
+              label: '☁️ 9. AWS CLI (aws s3 & s3api)',
+              to: '/docs/io-tools/awscli',
+            },
+          ],
+        },
+        {
           to: '/docs/intro',
           label: '📖 Introduction',
           position: 'left',
