@@ -57,6 +57,22 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: '🤖 AI Engineering & Agentic Systems',
+      collapsed: false,
+      items: [
+        'ai-engineering/ai-terminologies-glossary',
+        'ai-engineering/overview',
+        'ai-engineering/query-lifecycle',
+        'ai-engineering/rag-architecture',
+        'ai-engineering/agentic-ai-frameworks',
+        'ai-engineering/local-llms-ollama',
+        'ai-engineering/hands-on-rag-pipeline',
+        'ai-engineering/hands-on-agentic-tools',
+        'ai-engineering/interactive-apps-streamlit',
+      ],
+    },
+    {
+      type: 'category',
       label: '🛠️ Interactive Reference Tools',
       collapsed: false,
       items: [

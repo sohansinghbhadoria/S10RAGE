@@ -248,6 +248,49 @@ const config: Config = {
           ],
         },
         {
+          type: 'dropdown',
+          label: '🤖 AI Modules',
+          position: 'left',
+          items: [
+            {
+              label: '📖 AI Terminologies Glossary',
+              to: '/docs/ai-engineering/ai-terminologies-glossary',
+            },
+            {
+              label: '🧠 1. AI & LLM Foundations',
+              to: '/docs/ai-engineering/overview',
+            },
+            {
+              label: '🔬 2. ChatGPT Query Lifecycle',
+              to: '/docs/ai-engineering/query-lifecycle',
+            },
+            {
+              label: '📐 3. RAG Architecture & Vector Math',
+              to: '/docs/ai-engineering/rag-architecture',
+            },
+            {
+              label: '🤖 4. Agentic AI & Tool Calling',
+              to: '/docs/ai-engineering/agentic-ai-frameworks',
+            },
+            {
+              label: '💻 5. Local LLMs with Ollama',
+              to: '/docs/ai-engineering/local-llms-ollama',
+            },
+            {
+              label: '🧪 6. Lab: Local RAG Pipeline',
+              to: '/docs/ai-engineering/hands-on-rag-pipeline',
+            },
+            {
+              label: '🛠️ 7. Lab: Autonomous Agent Tools',
+              to: '/docs/ai-engineering/hands-on-agentic-tools',
+            },
+            {
+              label: '⚡ 8. Lab: Streamlit AI Studio',
+              to: '/docs/ai-engineering/interactive-apps-streamlit',
+            },
+          ],
+        },
+        {
           to: '/docs/intro',
           label: '📖 Introduction',
           position: 'left',
